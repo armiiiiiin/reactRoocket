@@ -9,7 +9,7 @@ import Main from './component/home/Main.jsx'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     
-    < App />
+    
     < Home />
   </React.StrictMode>,
 )

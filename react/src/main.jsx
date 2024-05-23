@@ -4,6 +4,7 @@ import './index.css'
 import Divar from './Divar'
 import Counter from './Counter'
 import PhoneBook from './PhoneBook'
+import App from './App'
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -11,7 +12,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     
 
 
-   <PhoneBook/>
-    
+<App/>    
   </React.StrictMode>,
 )

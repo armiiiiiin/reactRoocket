@@ -109,9 +109,9 @@ export default function PhoneBook() {
            
            <ListCardPhone>
 
-              { data.map((data)=>
+              { data.map((x)=>
                   <CardPhone 
-                    data = {data}
+                    x = {x}
                   />
             )}
 

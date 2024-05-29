@@ -24,17 +24,39 @@ export default function Todo() {
     )
 
 
-let handler = () =>{
+// let handler = () =>{
 
-    setdata([
-        ...data ,
-        {
-            title : "watch the tv" ,
-            status : false
-          }
-    ])
+//     setdata([
+//         ...data ,
+//         {
+//             title : "watch the tv" ,
+//             status : false
+//           }
+//     ])
+// }
+
+const [newTodoTitle , setNewTodoTitle] = useState ('');
+
+const onInputNewTodoHanler = (event) =>{
+  setNewTodoTitle (event.target.value)
 }
 
+
+const addNewTodoHanler = (event) =>{
+  if (event.key === 'Enter' &&  newTodoTitle!= '' ) {
+    
+
+    setdata([
+      ...data,
+      {
+        title : newTodoTitle,
+        status : false,
+      }
+    ])
+
+    setNewTodoTitle ('')
+  }  
+}
 
   return (
 
@@ -48,6 +70,9 @@ let handler = () =>{
 
               <div className="relative">
                   <input type="text" placeholder="What needs to be done today?"
+                  onChange={onInputNewTodoHanler}
+                  onKeyDown={addNewTodoHanler}
+                  value={newTodoTitle}
                   className="w-full px-2 py-3 border rounded outline-none border-grey-600" />
               </div>
 
@@ -59,7 +84,7 @@ let handler = () =>{
               <ListTodo w = {data}/>
 
 
-              <button onClick={handler}>more</button>
+              {/* <button onClick={handler}>more</button> */}
 
           </div>
       </div>

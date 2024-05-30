@@ -1,6 +1,8 @@
 import { useState } from "react"
 import ItemTodo from "./component/Todo/ItemTodo"
 import ListTodo from "./component/Todo/ListTodo"
+import { v4 as uuidv4 } from 'uuid';
+
 
 
 
@@ -12,10 +14,12 @@ export default function Todo() {
     const [data , setdata] = useState (
          
             [{
+              id : uuidv4(),
               title : "read a book" ,
               status : false
             },
             {
+              id : uuidv4(),
               title : "go to gym" ,
               status : true
             },
@@ -49,6 +53,7 @@ const addNewTodoHanler = (event) =>{
     setdata([
       ...data,
       {
+        id : uuidv4(),
         title : newTodoTitle,
         status : false,
       }
@@ -57,6 +62,16 @@ const addNewTodoHanler = (event) =>{
     setNewTodoTitle ('')
   }  
 }
+
+const deleteTodoHanler = (todo) => {
+    let newData = data.filter((todoItem)=>{
+      return todo.id != todoItem.id;
+
+
+    })
+    setdata(newData)
+  }
+
 
   return (
 
@@ -81,7 +96,7 @@ const addNewTodoHanler = (event) =>{
                 {data.map((i)=><ItemTodo x = {i} />)}
               </ListTodo> */}
 
-              <ListTodo w = {data}/>
+              <ListTodo w = {data} deleteTodo ={deleteTodoHanler}/>
 
 
               {/* <button onClick={handler}>more</button> */}

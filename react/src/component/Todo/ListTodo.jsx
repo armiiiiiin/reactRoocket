@@ -2,7 +2,7 @@ import ItemTodo from "./ItemTodo";
 
 
 
-export default function ListTodo({w}) {
+export default function ListTodo({w , deleteTodo}) {
     console.log({w})
   return (
       
@@ -11,7 +11,7 @@ export default function ListTodo({w}) {
 
         {/* {data.map((i)=><ItemTodo x = {i} />)} */}
 
-        { w.map((i , index) => <ItemTodo key={index} item={i} />)}
+        { w.map((i , index) => <ItemTodo key={index} item={i} deleteTodo={deleteTodo} />)}
         
     </ul>
 )

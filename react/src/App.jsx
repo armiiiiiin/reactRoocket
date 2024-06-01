@@ -10,11 +10,11 @@ export default function App() {
   return (
 
     <div className="flex justify-between m-20">
-      <div className="flex border w-60 h-60 justify-center">
+      <div className="flex border w-1/2 m-2 h-60 justify-center">
         <Job/>
       </div>
 
-      <div className="flex border w-60 h-60 justify-center">
+      <div className="flex border w-1/2 m-2 h-60 justify-center">
         <Rent/>
       </div>
 

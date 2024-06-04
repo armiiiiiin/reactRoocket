@@ -16,8 +16,32 @@ const [data , setdata] = useState([
 
 
 
+//use only onKeyDown
+// const onKeyDownHanler = ((e)=>{
+//   if (e.key == 'Enter' && e.target.value != '') {
+//     // console.log('first' , e.key , e.target.value )
+//     setdata([
+
+//       ...data,
+      
+//       {Title : e.target.value,
+//         status : false,
+//       }
+//     ]
+//     ),
+
+//     e.target.value = ''
+//   }
+// })
+//END
 
 
+//use onKeyDown and onChange
+const [Input , setInput] = useState ('')
+const onChange = (e)=>{
+  console.log(e.target.value)
+  setInput(e.target.value)
+}
 const onKeyDownHanler = ((e)=>{
   if (e.key == 'Enter' && e.target.value != '') {
     // console.log('first' , e.key , e.target.value )
@@ -25,15 +49,18 @@ const onKeyDownHanler = ((e)=>{
 
       ...data,
       
-      {Title : e.target.value,}
+      {
+        id : uuidv4(),
+        Title : Input,
+        status : false,
+      }
     ]
     ),
 
-    e.target.value = ''
+    setInput ('')
   }
 })
-
-
+//END
 
 
 
@@ -44,7 +71,8 @@ const onKeyDownHanler = ((e)=>{
       <div className="flex justify-center">
         <input type="text" placeholder="type any think" className="m-2 border rounded  border-gray-900 p-1"
         onKeyDown={onKeyDownHanler}
-        onChange={(e)=>console.log('onChange')}
+        onChange={onChange}
+        value={Input}
         />
         <button className="m-2">Add</button>
       </div>

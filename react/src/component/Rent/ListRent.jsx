@@ -1,6 +1,17 @@
+import ItemRent from "./ItemRent";
 
-export default function ListRent() {
+export default function ListRent({data}) {
+
+
+
   return (
-    <div>ListRent</div>
+
+    <div className="flex flex-wrap justify-center ">
+
+      {data.map((item)=><ItemRent item = {item} />)}
+
+    </div>
+
+    
   )
 }

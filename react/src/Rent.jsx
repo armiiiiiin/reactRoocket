@@ -16,26 +16,26 @@ const [data , setdata] = useState([
 
 
 //************************************** */
-//use only onKeyDown
-// const onKeyDownHanler = ((e)=>{
-//   if (e.key == 'Enter' && e.target.value != '') {
-//     // console.log('first' , e.key , e.target.value )
-//     setdata([
+  //use only onKeyDown
+    // const onKeyDownHanler = ((e)=>{
+    //   if (e.key == 'Enter' && e.target.value != '') {
+    //     // console.log('first' , e.key , e.target.value )
+    //     setdata([
 
-//       ...data,
-      
-//       {
-            // id : uuidv4(),
-            // Title : e.target.value,
-//          status : false,
-//       }
-//     ]
-//     ),
+    //       ...data,
+          
+    //       {
+                // id : uuidv4(),
+                // Title : e.target.value,
+    //          status : false,
+    //       }
+    //     ]
+    //     ),
 
-//     e.target.value = ''
-//   }
-// })
-//END
+    //     e.target.value = ''
+    //   }
+    // })
+  //END
 //************************************** */
 
 
@@ -70,6 +70,12 @@ const onKeyDownHanler = ((e)=>{
 
 
 
+const DeleteHanler = () =>{
+  console.log('delete')
+}
+
+
+
   return (
     <div>
       <h1 className="flex justify-center justify-items-center p-2">Rent</h1>
@@ -83,7 +89,7 @@ const onKeyDownHanler = ((e)=>{
         <button className="m-2">Add</button>
       </div>
 
-      <ListRent data={data} />
+      <ListRent data={data} DeleteHanler={DeleteHanler} />
     </div>
   )
 }

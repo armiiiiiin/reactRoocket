@@ -1,6 +1,6 @@
 import ItemRent from "./ItemRent";
 
-export default function ListRent({data}) {
+export default function ListRent({data , DeleteHanler}) {
 
 
 
@@ -8,7 +8,7 @@ export default function ListRent({data}) {
 
     <div className="flex flex-wrap justify-center ">
 
-      {data.map((item)=><ItemRent item = {item} />)}
+      {data.map((item)=><ItemRent item = {item} DeleteHanler={DeleteHanler} />)}
 
     </div>
 

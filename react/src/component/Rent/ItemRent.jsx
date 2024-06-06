@@ -1,5 +1,7 @@
+import DeletItem from "../Todo/DeletItem";
+import DeleteRent from "./DeleteRent";
 
-export default function ItemRent({item}) {
+export default function ItemRent({item , DeleteHanler}) {
 
 
   return (
@@ -10,7 +12,7 @@ export default function ItemRent({item}) {
       
       <h1>{item?.Title}</h1>
       <button className="flex justify-between ">
-        <span className=" font-bold text-red-800 uppercase p-2">delete</span>
+        <DeleteRent clickHanler={DeleteHanler} />
         <span className="font-bold text-green-800 uppercase p-2">edite</span>
       </button>
     </div>

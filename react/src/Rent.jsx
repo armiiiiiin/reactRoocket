@@ -15,7 +15,7 @@ const [data , setdata] = useState([
 ])
 
 
-
+//************************************** */
 //use only onKeyDown
 // const onKeyDownHanler = ((e)=>{
 //   if (e.key == 'Enter' && e.target.value != '') {
@@ -24,8 +24,10 @@ const [data , setdata] = useState([
 
 //       ...data,
       
-//       {Title : e.target.value,
-//         status : false,
+//       {
+            // id : uuidv4(),
+            // Title : e.target.value,
+//          status : false,
 //       }
 //     ]
 //     ),
@@ -34,8 +36,11 @@ const [data , setdata] = useState([
 //   }
 // })
 //END
+//************************************** */
 
 
+
+//************************************** */
 //use onKeyDown and onChange
 const [Input , setInput] = useState ('')
 const onChange = (e)=>{
@@ -61,6 +66,7 @@ const onKeyDownHanler = ((e)=>{
   }
 })
 //END
+//************************************** */
 
 
 

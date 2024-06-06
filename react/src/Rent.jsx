@@ -70,9 +70,23 @@ const onKeyDownHanler = ((e)=>{
 
 
 
-const DeleteHanler = () =>{
-  console.log('delete')
+//************************************** */
+//Delete
+const DeleteHanler = (item) =>{
+  let newData = data.filter ((itemsssss)=>{
+
+    return item.id != itemsssss.id;
+  })
+
+  setdata(newData)
+  console.log(newData)
+  console.log(data)
+  console.log(item)
 }
+//End
+//************************************** */
+
+
 
 
 

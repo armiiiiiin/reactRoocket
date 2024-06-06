@@ -12,7 +12,7 @@ export default function ItemRent({item , DeleteHanler}) {
       
       <h1>{item?.Title}</h1>
       <button className="flex justify-between ">
-        <DeleteRent clickHanler={DeleteHanler} />
+        <DeleteRent clickHanler={()=>DeleteHanler(item)} />
         <span className="font-bold text-green-800 uppercase p-2">edite</span>
       </button>
     </div>

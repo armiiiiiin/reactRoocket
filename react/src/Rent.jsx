@@ -90,6 +90,28 @@ const DeleteHanler = (item) =>{
 
 
 
+const StatusHanler = (item)=>{
+  
+ 
+  let newitemstatus = data.map((todoitem) => {
+    if(item.id === todoitem.id ) {
+      todoitem.status = ! todoitem.status
+    }
+
+    return todoitem
+  })
+
+    // console.log(newitemstatus)
+    setdata(newitemstatus)
+
+  }
+
+
+console.log(data)
+
+
+
+
   return (
     <div>
       <h1 className="flex justify-center justify-items-center p-2">Rent</h1>
@@ -103,7 +125,7 @@ const DeleteHanler = (item) =>{
         <button className="m-2">Add</button>
       </div>
 
-      <ListRent data={data} DeleteHanler={DeleteHanler} />
+      <ListRent data={data} DeleteHanler={DeleteHanler}   StatusHanler={StatusHanler} />
     </div>
   )
 }

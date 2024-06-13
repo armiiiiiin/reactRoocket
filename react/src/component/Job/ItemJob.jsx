@@ -1,13 +1,21 @@
 
-export default function ItemJob({i}) {
+
+
+export default function ItemJob({item}) {
   return (
+    <div className="border border-gray-400 m-2 p-2 w-full">
 
-
-    <div>
-      <div className="flex  justify-between">
-        <input type="checkbox"  />
-        <h1>{i?.Title}</h1>
+      <div className="flex justify-between">
+        <h1>{item.title}</h1>
+        <input type="checkbox" checked={item.status}/>
       </div>
+
+      <div className="flex justify-between">
+        <h1>delete</h1>
+        <h1>edite</h1>
+      </div>
+
     </div>
+
   )
 }

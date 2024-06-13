@@ -1,11 +1,12 @@
-import ItemJob from "./ItemJob";
+import ItemJob from './ItemJob'
 
-export default function ListJob({jobStaticData}) {
+export default function ListJob({data}) {
   return (
 
-
     <div>
-      {jobStaticData.map((i)=><ItemJob i = {i}/>)}
+
+      {data.map((item)=><ItemJob item={item} />)}
+      
     </div>
   )
 }
